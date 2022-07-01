@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class CarDAO {
+public class CarDAO implements CarD {
 
     private static int CARS_ID;
     private List<Car> car;
@@ -20,7 +20,8 @@ public class CarDAO {
         car.add(new Car(++CARS_ID, "Nissan", "r587nb"));
         car.add(new Car(++CARS_ID, "Lada", "r357st"));
     }
-
+    
+    @Override 
     public List<Car> table(Integer count) {
         if (count >= 5) {
             return car;
