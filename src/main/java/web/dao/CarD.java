@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface CarD {
 
-    List<Car> table(int count);
+    List<Car> table(Integer count);
 }
